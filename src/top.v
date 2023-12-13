@@ -1,4 +1,4 @@
-module zhuoxuan001_top (
+module tt_um_zhuoxuan001_top (
     input clk,
     input rst,
     input [7:0] x0_re,
