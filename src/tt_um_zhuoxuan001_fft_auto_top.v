@@ -53,8 +53,15 @@ module tt_um_zhuoxuan001_fft_auto_top (
 
     always @(posedge clk) begin
         if (~rst_n) begin
-            uio_out_reg <= 8'b0;
             counter <= 8'b0;
+            a0[7:5] <= 3'b0;
+            a1[7:5] <= 3'b0;
+            a2[7:5] <= 3'b0;
+            a3[7:5] <= 3'b0;
+            a4[7:5] <= 3'b0;
+            a5[7:5] <= 3'b0;
+            a6[7:5] <= 3'b0;
+            a7[7:5] <= 3'b0;
         end
         if (ena) begin
             if (counter == 4'b0000) begin
@@ -96,7 +103,7 @@ module tt_um_zhuoxuan001_fft_auto_top (
     end
 
     fft inst1 (
-        .clk(new_clk),
+        .clk(clk),
         .rst(~rst_n),
         .x0_re(x0_re),
         .x0_im(9'b0),
