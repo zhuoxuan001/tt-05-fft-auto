@@ -53,7 +53,7 @@ module tt_um_zhuoxuan001_fft_auto_top (
 
     always @(posedge clk) begin
         if (~rst_n) begin
-            counter <= 8'b0;
+            counter <= 4'b0;
             a0[7:5] <= 3'b0;
             a1[7:5] <= 3'b0;
             a2[7:5] <= 3'b0;
