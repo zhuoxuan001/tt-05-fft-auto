@@ -12,14 +12,14 @@ module tt_um_zhuoxuan001_fft_auto_top (
 ); 
 
     reg [3:0] counter = 4'b0;
-    reg [7:0] x0_re = 8'b0;
-    reg [7:0] x1_re = 8'b0;
-    reg [7:0] x2_re = 8'b0;
-    reg [7:0] x3_re = 8'b0;
-    reg [7:0] x4_re = 8'b0;
-    reg [7:0] x5_re = 8'b0;
-    reg [7:0] x6_re = 8'b0;
-    reg [7:0] x7_re = 8'b0;
+    reg [8:0] x0_re = 9'b0;
+    reg [8:0] x1_re = 9'b0;
+    reg [8:0] x2_re = 9'b0;
+    reg [8:0] x3_re = 9'b0;
+    reg [8:0] x4_re = 9'b0;
+    reg [8:0] x5_re = 9'b0;
+    reg [8:0] x6_re = 9'b0;
+    reg [8:0] x7_re = 9'b0;
     /* verilator lint_off UNUSEDSIGNAL */
     wire signed [8:0] a0_re = 9'b0;
     wire signed [8:0] a0_im = 9'b0;
@@ -65,28 +65,28 @@ module tt_um_zhuoxuan001_fft_auto_top (
         end
         if (ena) begin
             if (counter == 4'b0000) begin
-                x0_re <= ui_in;
+                x0_re[7:0] <= ui_in;
             end
             if (counter == 4'b0001) begin
-                x1_re <= ui_in;
+                x1_re[7:0] <= ui_in;
             end
             if (counter == 4'b0010) begin
-                x2_re <= ui_in;
+                x2_re[7:0] <= ui_in;
             end
             if (counter == 4'b0011) begin
-                x3_re <= ui_in;
+                x3_re[7:0] <= ui_in;
             end
             if (counter == 4'b0100) begin
-                x4_re <= ui_in;
+                x4_re[7:0] <= ui_in;
             end
             if (counter == 4'b0101) begin
-                x5_re <= ui_in;
+                x5_re[7:0] <= ui_in;
             end
             if (counter == 4'b0110) begin
-                x6_re <= ui_in;
+                x6_re[7:0] <= ui_in;
             end
             if (counter == 4'b0111) begin
-                x7_re <= ui_in;
+                x7_re[7:0] <= ui_in;
             end
             if (counter == 4'b1011) begin
                 a0 <= a0_re[4:0] * a0_re[4:0] + a0_im[4:0] * a0_im[4:0];
