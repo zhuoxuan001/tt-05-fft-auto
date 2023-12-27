@@ -2,7 +2,7 @@ module fft (
     input clk,
     input rst,
     input [8:0] x0_re,
-    input [8:0] x0_im
+    input [8:0] x0_im,
     input [8:0] x1_re,
     input [8:0] x1_im,
     input [8:0] x2_re,
